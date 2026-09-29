@@ -1,0 +1,554 @@
+/* ==========================================================================
+   ई-सेतु घटक शैलियाँ (Components - 100% Desi Peach & White UI)
+   स्थायी साइडबार, प्रोफाइल, कबाड़ खरीदार, ऑडियो प्लेयर, बड़ा माइक और रडार
+   ========================================================================== */
+
+/* 1. साइडबार प्रोफाइल कार्ड */
+.sidebar-profile-card {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-avatar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8a65, #ea580c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 12px var(--peach-glow);
+  flex-shrink: 0;
+}
+
+.profile-info h3 {
+  font-size: 1.05rem;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.profile-info p {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+/* पिछले महीने की कमाई व कबाड़ बॉक्स */
+.last-month-stat-box {
+  background: #ffffff;
+  border: 1.5px solid var(--peach-300);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-top: 10px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.stat-row:not(:last-child) {
+  border-bottom: 1px dashed var(--peach-200);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.stat-val-money {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ea580c;
+}
+
+.stat-val-weight {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #059669;
+}
+
+/* 2. कबाड़ खरीदार अधिकृत रिसाइक्लर (Buyer History Section in Sidebar) */
+.sidebar-buyers-section {
+  background: #ffffff;
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-buyers-section h3 {
+  font-size: 0.95rem;
+  color: #1f2937;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.buyer-history-card {
+  background: #fffaf6;
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-top: 10px;
+  transition: 0.15s ease;
+}
+
+.buyer-history-card:hover {
+  border-color: var(--peach-400);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.1);
+}
+
+.buyer-company-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.buyer-meta {
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.buyer-payout-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--peach-200);
+}
+
+.buyer-amount {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ea580c;
+}
+
+/* 3. साइडबार में अन्य उपयोगी सुविधाएं (Sidebar Extra Features) */
+.sidebar-extra-card {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+}
+
+.sidebar-feature-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-md);
+  color: #1f2937;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: 0.15s ease;
+}
+
+.sidebar-feature-btn:hover {
+  background: var(--peach-50);
+  border-color: var(--peach-400);
+  color: #ea580c;
+}
+
+/* 4. दैनिक मंडी भाव ऑडियो प्लेयर बार */
+.mandi-audio-card {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.audio-info-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.radio-icon-pill {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8a65, #ea580c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px var(--peach-glow);
+}
+
+.audio-text-content h3 {
+  font-size: 1rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.audio-text-content p {
+  font-size: 0.78rem;
+  color: var(--peach-700);
+  font-weight: 600;
+}
+
+.audio-waveform-bars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 24px;
+}
+
+.wave-bar {
+  width: 3px;
+  height: 6px;
+  background: var(--peach-500);
+  border-radius: 2px;
+}
+
+.playing .wave-bar:nth-child(1) { animation: wave 0.8s infinite ease-in-out; }
+.playing .wave-bar:nth-child(2) { animation: wave 0.8s 0.2s infinite ease-in-out; }
+.playing .wave-bar:nth-child(3) { animation: wave 0.8s 0.4s infinite ease-in-out; }
+.playing .wave-bar:nth-child(4) { animation: wave 0.8s 0.1s infinite ease-in-out; }
+.playing .wave-bar:nth-child(5) { animation: wave 0.8s 0.3s infinite ease-in-out; }
+
+@keyframes wave {
+  0%, 100% { height: 4px; }
+  50% { height: 22px; }
+}
+
+.play-broadcast-btn {
+  background: linear-gradient(135deg, #ff8a65, #ea580c);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px var(--peach-glow);
+}
+
+/* 5. "बोलके लॉट बनाएं" हीरो वॉइस बैनर */
+.voice-hero-banner {
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  border: 2px dashed var(--peach-300);
+  border-radius: var(--radius-lg);
+  padding: 24px 16px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.giant-mic-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8a65, #ea580c);
+  border: 4px solid #ffffff;
+  color: #fff;
+  font-size: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 12px 0;
+  box-shadow: 0 0 25px var(--peach-glow);
+  transition: transform 0.2s ease;
+}
+
+.giant-mic-btn:hover {
+  transform: scale(1.06);
+}
+
+.giant-mic-btn.listening {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  animation: pulse-mic 1.2s infinite;
+}
+
+@keyframes pulse-mic {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+  70% { transform: scale(1.08); box-shadow: 0 0 0 18px rgba(220, 38, 38, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+.voice-transcript-box {
+  background: #ffffff;
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-top: 14px;
+  font-size: 1rem;
+  color: var(--peach-700);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* 6. कार्य ग्रिड (4 पेटेंट-ग्रेड फीचर्स) */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.feature-tile {
+  background: #ffffff;
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-tile:hover {
+  border-color: var(--peach-500);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.12);
+}
+
+.feature-tile.tile-radical {
+  border-left: 4px solid var(--peach-500);
+  background: linear-gradient(145deg, #fff7ed 0%, #ffffff 100%);
+}
+
+.tile-icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tile-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: #ffedd5;
+}
+
+/* 7. मंडी भाव बोर्ड */
+.price-board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.rate-card {
+  background: #ffffff;
+  border: 1px solid var(--peach-200);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.rate-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.rate-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.rate-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ea580c;
+}
+
+.rate-unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.epr-bonus-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #059669;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* 8. ध्वनि से तांबा परख HUD */
+.frequency-canvas {
+  width: 100%;
+  height: 140px;
+  background: #fff7ed;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--peach-300);
+  margin: 16px 0;
+}
+
+.acoustic-verdict-box {
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+.verdict-pure-copper {
+  background: #ecfdf5;
+  border: 2px solid #059669;
+  color: #065f46;
+}
+
+.verdict-alu-mix {
+  background: #fff7ed;
+  border: 2px solid var(--peach-500);
+  color: var(--peach-700);
+}
+
+/* 9. कानूनी सुरक्षा कवच कार्ड */
+.legal-shield-certificate {
+  background: #ffffff;
+  border: 2px solid var(--peach-400);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.cert-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--peach-200);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.cert-qr-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff7ed;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--peach-200);
+  width: 140px;
+  height: 140px;
+  margin: 14px auto;
+}
+
+/* 10. कैमरा स्कैनर HUD */
+.camera-scanner-hud {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #1e293b;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewfinder-box {
+  position: absolute;
+  width: 75%;
+  height: 70%;
+  border: 2px dashed var(--peach-400);
+  border-radius: var(--radius-md);
+  pointer-events: none;
+}
+
+.chumbak-warning-banner {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  background: #dc2626;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+/* 11. रिसाइक्लर रडार स्क्रीन */
+.radar-screen-wrap {
+  width: 100%;
+  height: 300px;
+  background: radial-gradient(circle, #fff7ed 0%, #ffedd5 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--peach-300);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-sweep-beam {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(234, 88, 12, 0.25);
+  background: conic-gradient(from 0deg, rgba(249, 115, 22, 0.35) 0deg, transparent 60deg, transparent 360deg);
+  animation: sweep 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.radar-blip {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ea580c;
+  box-shadow: 0 0 12px var(--peach-glow);
+  cursor: pointer;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "e-setu-platform",
+  "version": "1.0.0",
+  "description": "Vernacular E-Waste Bridge Connecting Informal Collectors to Authorized Recyclers (SIH 2026)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'E-Setu Build Ready'"
+  },
+  "keywords": [
+    "e-waste",
+    "smart-india-hackathon",
+    "sih2026",
+    "cpcb",
+    "epr",
+    "pwa",
+    "render",
+    "vercel"
+  ],
+  "author": "E-Setu Innovation Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "porh_id": "PORH-2026-99014",
+    "lot_id": "LOT-MUM-449",
+    "sha256_photo_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_scale_hash": "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e",
+    "handshake_type": "OFFLINE_ACOUSTIC_AND_DYNAMIC_QR",
+    "collector_nonce": "NONCE-RAMU-882194",
+    "recycler_nonce": "NONCE-REC002-339102",
+    "gps_coords": { "lat": 19.0688, "lng": 72.8804 },
+    "accuracy_meters": 4.2,
+    "timestamp": "2026-09-28T16:45:10+05:30",
+    "cpcb_form6_manifest_no": "MAN-CPCB-MH-2026-00449",
+    "status": "VERIFIED_AND_LOCKED",
+    "audit_trail": [
+      { "step": "LOT_CREATED_OFFLINE", "time": "2026-09-28T14:10:00+05:30", "by": "COL-RAMU-01" },
+      { "step": "SCALE_OCR_CONFIRMED", "time": "2026-09-28T16:40:22+05:30", "val": "18.5 kg" },
+      { "step": "DYNAMIC_QR_HANDSHAKE", "time": "2026-09-28T16:45:10+05:30", "parties": "COL-RAMU-01 & REC-MH-002" },
+      { "step": "CPCB_EPR_CREDIT_GENERATED", "time": "2026-09-28T18:00:15+05:30", "credits_kg": 18.5 }
+    ]
+  }
+]
