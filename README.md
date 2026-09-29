@@ -60,12 +60,46 @@ Over **90% of India's e-waste** is collected through informal scrap dealers (*ka
 
 ---
 
+## 🌐 Live Cloud Deployment (Render & Vercel)
+
+### Option A: Deploy to Vercel (Frontend & Serverless Edge)
+1. **Via Vercel Web Dashboard (1-Click)**:
+   - Push this repo to GitHub:
+     ```bash
+     git remote add origin https://github.com/<YOUR_USERNAME>/e-setu.git
+     git push -u origin main
+     ```
+   - Go to [vercel.com/new](https://vercel.com/new) -> Import your repository.
+   - Vercel automatically reads `vercel.json` and deploys your PWA and serverless API endpoints instantly!
+2. **Via Vercel CLI**:
+   ```bash
+   npx vercel
+   ```
+
+### Option B: Deploy to Render (Node.js Web Service & REST Backend)
+1. **Via Render Web Dashboard (Blueprint)**:
+   - Push your code to GitHub or GitLab.
+   - Go to [dashboard.render.com](https://dashboard.render.com) -> Click **New +** -> **Blueprint**.
+   - Select your repo: Render will automatically detect [`render.yaml`](file:///c:/Users/Raunak/OneDrive/Desktop/sih%202026/render.yaml) and configure the Node web service on port 10000 with healthcheck probes!
+2. **Via Manual Web Service**:
+   - Environment: `Node`
+   - Build Command: `npm install --omit=dev || true`
+   - Start Command: `node server.js`
+   - Healthcheck Path: `/health`
+
+---
+
 ## 🚀 How to Run Locally
-1. Run PowerShell server:
+1. Run PowerShell server (Windows native, zero-dependencies):
    ```powershell
    powershell -ExecutionPolicy Bypass -File .\server.ps1 -port 8080
    ```
-2. Open in any browser:
+2. Or run Node server:
+   ```bash
+   node server.js
+   ```
+3. Open in any browser:
    ```
    http://localhost:8080
    ```
+
