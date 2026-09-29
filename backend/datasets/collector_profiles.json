@@ -1,0 +1,120 @@
+[
+  {
+    "collector_id": "COL-RAMU-01",
+    "persona_name": "रामू शिंदे (Ramu Shinde)",
+    "role": "फेरीवाला कबाड़ी साथी (Street Collector)",
+    "base_location": "धारावी वार्ड 4, मुंबई (Dharavi, Mumbai)",
+    "language_preference": "hi",
+    "phone_number": "+91 98765 43210",
+    "swachh_karma_score": 680,
+    "karma_tier": "हरित योद्धा (Green Warrior)",
+    "last_month_stats": {
+      "month_name": "अगस्त 2026",
+      "earnings_inr": 28450,
+      "epr_bonus_inr": 2350,
+      "waste_sold_kg": 210.5,
+      "transactions_count": 14
+    },
+    "sold_to_recyclers": [
+      {
+        "recycler_name": "इको-रीगल ग्रीन रिफाइनर्स प्रा. लि.",
+        "facility_location": "तलोजा MIDC, नवी मुंबई",
+        "cpcb_reg": "CPCB/EPR/2023/MH/4491",
+        "category": "सर्वर व कंप्यूटर मदरबोर्ड (PCB)",
+        "weight_kg": 68.5,
+        "amount_paid_inr": 26030,
+        "payment_mode": "नकद (CASH)",
+        "date": "24 अगस्त 2026",
+        "receipt_no": "REC-MUM-8841"
+      },
+      {
+        "recycler_name": "महाराष्ट्र ई-मेटल्स एंड अर्बन माइनिंग हब",
+        "facility_location": "कुर्ला वेस्ट इंडस्ट्रियल एरिया, मुंबई",
+        "cpcb_reg": "CPCB/EPR/2022/MH/2108",
+        "category": "मोटे तांबे वाले पावर केबल",
+        "weight_kg": 82.0,
+        "amount_paid_inr": 37720,
+        "payment_mode": "नकद (CASH)",
+        "date": "18 अगस्त 2026",
+        "receipt_no": "REC-MUM-7712"
+      },
+      {
+        "recycler_name": "पृथ्वी रिकवरी सिस्टम्स एंड हाइड्रोमेटलर्जी",
+        "facility_location": "भिवंडी लॉजिस्टिक्स पार्क, ठाणे",
+        "cpcb_reg": "CPCB/EPR/2024/MH/5602",
+        "category": "लिथियम मोबाइल व लैपटॉप बैटरियां",
+        "weight_kg": 60.0,
+        "amount_paid_inr": 14400,
+        "payment_mode": "यूपीआई (UPI)",
+        "date": "09 अगस्त 2026",
+        "receipt_no": "REC-MUM-6604"
+      }
+    ],
+    "stats": {
+      "total_e_waste_collected_kg": 485.5,
+      "total_earnings_inr": 48250,
+      "total_epr_bonus_received_inr": 3450,
+      "safe_handover_count": 28,
+      "hazardous_incidents": 0
+    }
+  },
+  {
+    "collector_id": "COL-BABU-02",
+    "persona_name": "बाबू भाई स्क्रैप डीलर (Babu Bhai)",
+    "role": "दुकानदार व मोहल्ला एग्रीगेटर (Kurla Yard Aggregator)",
+    "base_location": "कुर्ला वेस्ट कबाड़ मार्केट, मुंबई",
+    "language_preference": "mr",
+    "phone_number": "+91 98201 11223",
+    "swachh_karma_score": 1420,
+    "karma_tier": "गोल्डन मास्टर कबाड़ी",
+    "last_month_stats": {
+      "month_name": "अगस्त 2026",
+      "earnings_inr": 142800,
+      "epr_bonus_inr": 12600,
+      "waste_sold_kg": 1280.0,
+      "transactions_count": 32
+    },
+    "sold_to_recyclers": [
+      {
+        "recycler_name": "इको-रीगल ग्रीन रिफाइनर्स प्रा. लि.",
+        "facility_location": "तलोजा MIDC, नवी मुंबई",
+        "cpcb_reg": "CPCB/EPR/2023/MH/4491",
+        "category": "भारी इनवर्टर व यूपीएस लेड-एसिड बैटरी",
+        "weight_kg": 650.0,
+        "amount_paid_inr": 73450,
+        "payment_mode": "नकद (CASH)",
+        "date": "27 अगस्त 2026",
+        "receipt_no": "REC-KURLA-9901"
+      },
+      {
+        "recycler_name": "महाराष्ट्र ई-मेटल्स एंड अर्बन माइनिंग हब",
+        "facility_location": "कुर्ला वेस्ट इंडस्ट्रियल एरिया, मुंबई",
+        "cpcb_reg": "CPCB/EPR/2022/MH/2108",
+        "category": "शुद्ध तांबा वाइंडिंग कंप्रेसर व मोटर",
+        "weight_kg": 420.0,
+        "amount_paid_inr": 69300,
+        "payment_mode": "नकद (CASH)",
+        "date": "14 अगस्त 2026",
+        "receipt_no": "REC-KURLA-8854"
+      },
+      {
+        "recycler_name": "पृथ्वी रिकवरी सिस्टम्स एंड हाइड्रोमेटलर्जी",
+        "facility_location": "भिवंडी लॉजिस्टिक्स पार्क, ठाणे",
+        "cpcb_reg": "CPCB/EPR/2024/MH/5602",
+        "category": "साफ कंप्यूटर प्लास्टिक बॉडी (ABS)",
+        "weight_kg": 210.0,
+        "amount_paid_inr": 8820,
+        "payment_mode": "यूपीआई (UPI)",
+        "date": "04 अगस्त 2026",
+        "receipt_no": "REC-KURLA-7112"
+      }
+    ],
+    "stats": {
+      "total_e_waste_collected_kg": 2450.0,
+      "total_earnings_inr": 238000,
+      "total_epr_bonus_received_inr": 18400,
+      "safe_handover_count": 64,
+      "hazardous_incidents": 0
+    }
+  }
+]

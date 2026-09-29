@@ -1,0 +1,141 @@
+{
+  "last_updated": "2026-09-29T07:30:00+05:30",
+  "mandi_hubs": [
+    { "zone_id": "mumbai-dharavi", "city": "Mumbai", "mandi_name": "Dharavi-Kurla Scrap Market" },
+    { "zone_id": "delhi-seelampur", "city": "Delhi NCR", "mandi_name": "Seelampur-Mayapuri E-Mandi" },
+    { "zone_id": "bangalore-peenya", "city": "Bengaluru", "mandi_name": "Peenya-Shivajinagar E-Hub" }
+  ],
+  "audio_bulletin": {
+    "hi": "नमस्ते साथियों! आज का दैनिक कबाड़ मंडी भाव: तांबे वाले मोटे केबल का भाव ₹460 प्रति किलो पर मजबूत है। सर्वर और रैम वाले ग्रेड-ए सर्किट बोर्ड का भाव ₹680 प्रति किलो है। अधिकृत रिसाइक्लर को देने पर ₹45 का अतिरिक्त ईपीआर बोनस सीधे आपके खाते में मिलेगा। तेज़ाब और आग से बचें, सुरक्षित बेचें और ज्यादा कमाएं!",
+    "mr": "नमस्कार मित्रांनो! आजचे दैनिक भंगार बाजार भाव: तांब्याच्या जाड केबलचे भाव ₹460 प्रति किलोवर मजबूत आहेत. सर्व्हर आणि रॅमचे ग्रेड-ए सर्किट बोर्ड ₹680 प्रति किलोवर आहेत. अधिकृत रिसायकलर्सना दिल्यास ₹45 चा अतिरिक्त ईपीआर बोनस थेट मिळेल. ऍसिड आणि आगीपासून दूर राहा, सुरक्षित विका आणि जास्त कमवा!",
+    "en": "Good morning! Today's E-Waste Mandi Rates: Heavy copper power cables remain strong at ₹460/kg. High-grade server and RAM PCBs are trading at ₹680/kg. Handing over to authorized recyclers earns you an extra direct EPR bonus of ₹45/kg. Avoid open burning and acid leaching to maximize earnings safely!"
+  },
+  "rates": [
+    {
+      "sub_id": "pcb-grade-a",
+      "category": "PCBs",
+      "name": "Grade-A Server & RAM Boards",
+      "name_hi": "सर्वर व रैम बोर्ड (ग्रेड-ए)",
+      "name_mr": "सर्व्हर व रॅम बोर्ड (ग्रेड-ए)",
+      "base_price": 680,
+      "epr_bonus": 45,
+      "total_effective_price": 725,
+      "unit": "kg",
+      "trend": "up",
+      "change_24h": "+₹25",
+      "history_30d": [620, 630, 625, 640, 650, 655, 660, 670, 665, 680]
+    },
+    {
+      "sub_id": "pcb-grade-b",
+      "category": "PCBs",
+      "name": "Standard PC Motherboards",
+      "name_hi": "कंप्यूटर मदरबोर्ड (ग्रेड-बी)",
+      "name_mr": "कॉम्प्युटर मदरबोर्ड (ग्रेड-बी)",
+      "base_price": 380,
+      "epr_bonus": 30,
+      "total_effective_price": 410,
+      "unit": "kg",
+      "trend": "up",
+      "change_24h": "+₹10",
+      "history_30d": [350, 355, 360, 365, 370, 370, 375, 380]
+    },
+    {
+      "sub_id": "pcb-grade-c",
+      "category": "PCBs",
+      "name": "SMPS & Brown TV Boards",
+      "name_hi": "टीवी व पावर सप्लाई भूरे बोर्ड",
+      "name_mr": "टीव्ही व पॉवर सप्लाय तपकिरी बोर्ड",
+      "base_price": 85,
+      "epr_bonus": 10,
+      "total_effective_price": 95,
+      "unit": "kg",
+      "trend": "neutral",
+      "change_24h": "₹0",
+      "history_30d": [80, 82, 85, 85, 85, 85]
+    },
+    {
+      "sub_id": "cable-copper-high",
+      "category": "Cables",
+      "name": "Heavy Copper Power Cable (>70%)",
+      "name_hi": "मोटा तांबा केबल (तार)",
+      "name_mr": "जाड तांबे केबल (तार)",
+      "base_price": 460,
+      "epr_bonus": 25,
+      "total_effective_price": 485,
+      "unit": "kg",
+      "trend": "up",
+      "change_24h": "+₹15",
+      "history_30d": [420, 430, 440, 445, 450, 460]
+    },
+    {
+      "sub_id": "batt-li-pouch",
+      "category": "Batteries",
+      "name": "Li-ion Mobile Pouch Batteries",
+      "name_hi": "लिथियम मोबाइल बैटरी",
+      "name_mr": "लिथियम मोबाईल बॅटरी",
+      "base_price": 240,
+      "epr_bonus": 50,
+      "total_effective_price": 290,
+      "unit": "kg",
+      "trend": "up",
+      "change_24h": "+₹20",
+      "history_30d": [200, 210, 220, 225, 230, 240]
+    },
+    {
+      "sub_id": "batt-lead-acid",
+      "category": "Batteries",
+      "name": "Heavy Lead-Acid Inverter Battery",
+      "name_hi": "इनवर्टर लेड-एसिड बैटरी",
+      "name_mr": "इन्व्हर्टर लेड-अॅसिड बॅटरी",
+      "base_price": 95,
+      "epr_bonus": 18,
+      "total_effective_price": 113,
+      "unit": "kg",
+      "trend": "neutral",
+      "change_24h": "₹0",
+      "history_30d": [92, 94, 95, 95, 95]
+    },
+    {
+      "sub_id": "motor-copper-pure",
+      "category": "Motors",
+      "name": "Pure Copper AC Compressor / Motor",
+      "name_hi": "100% तांबा कंप्रेसर व मोटर",
+      "name_mr": "100% तांबे कॉम्प्रेसर व मोटार",
+      "base_price": 165,
+      "epr_bonus": 15,
+      "total_effective_price": 180,
+      "unit": "kg",
+      "trend": "up",
+      "change_24h": "+₹5",
+      "history_30d": [150, 155, 158, 160, 165]
+    },
+    {
+      "sub_id": "disp-crt-glass",
+      "category": "Displays",
+      "name": "Intact CRT TV / Monitor Glass",
+      "name_hi": "साबुत सीआरटी मॉनिटर",
+      "name_mr": "अखंड सीआरटी मॉनिटर",
+      "base_price": 18,
+      "epr_bonus": 12,
+      "total_effective_price": 30,
+      "unit": "kg",
+      "trend": "neutral",
+      "change_24h": "₹0",
+      "history_30d": [18, 18, 18, 18]
+    },
+    {
+      "sub_id": "plastic-clean-abs",
+      "category": "Plastics",
+      "name": "Clean ABS Computer Plastic",
+      "name_hi": "साफ कंप्यूटर प्लास्टिक बॉडी",
+      "name_mr": "स्वच्छ कॉम्प्युटर प्लास्टिक बॉडी",
+      "base_price": 42,
+      "epr_bonus": 8,
+      "total_effective_price": 50,
+      "unit": "kg",
+      "trend": "down",
+      "change_24h": "-₹2",
+      "history_30d": [46, 45, 44, 42]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "e-setu-frontend",
+  "version": "1.0.0",
+  "description": "E-Setu Vernacular PWA Frontend",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "pwa",
+    "e-setu",
+    "frontend"
+  ],
+  "author": "E-Setu Innovation Team",
+  "license": "MIT"
+}

@@ -1,12 +1,14 @@
 {
   "name": "e-setu-platform",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Vernacular E-Waste Bridge Connecting Informal Collectors to Authorized Recyclers (SIH 2026)",
-  "main": "server.js",
+  "main": "backend/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'E-Setu Build Ready'"
+    "start": "node backend/server.js",
+    "start:backend": "node backend/server.js",
+    "start:frontend": "powershell -ExecutionPolicy Bypass -File backend/server.ps1 -port 5050",
+    "dev": "node backend/server.js",
+    "build": "echo 'E-Setu Frontend & Backend Ready'"
   },
   "keywords": [
     "e-waste",

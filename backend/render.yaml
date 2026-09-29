@@ -1,12 +1,13 @@
 services:
   - type: web
-    name: e-setu-backend
+    name: e-setu-bridge
     env: node
-    region: singapore
     plan: free
-    buildCommand: npm install --omit=dev || true
-    startCommand: node backend/server.js
+    region: oregon
+    buildCommand: echo "Installing dependencies and preparing E-Setu..."
+    startCommand: node server.js
     healthCheckPath: /health
+    autoDeploy: true
     envVars:
       - key: NODE_ENV
         value: production

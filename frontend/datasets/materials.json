@@ -1,0 +1,216 @@
+[
+  {
+    "id": "mat-pcb",
+    "category": "PCBs & Circuit Boards",
+    "name_hi": "कंप्यूटर व इलेक्ट्रॉनिक्स सर्किट बोर्ड (PCB)",
+    "name_mr": "कॉम्प्युटर व इलेक्ट्रॉनिक्स सर्किट बोर्ड (PCB)",
+    "sub_categories": [
+      {
+        "sub_id": "pcb-grade-a",
+        "name": "Grade A: Telecom & Server Boards, Gold RAM, High-End Motherboards",
+        "name_hi": "ग्रेड ए: सर्वर बोर्ड, रैम (RAM), गोल्ड-प्लेटेड टेलीकॉम कार्ड",
+        "name_mr": "ग्रेड ए: सर्व्हर बोर्ड, रॅम (RAM), गोल्ड-प्लेटेड टेलिकॉम कार्ड",
+        "base_rate_per_kg": 680,
+        "epr_bonus_per_kg": 45,
+        "precious_metals": { "gold_g_per_kg": 0.45, "silver_g_per_kg": 2.8, "copper_g_per_kg": 220, "palladium_g_per_kg": 0.08 },
+        "visual_clues": "Green/blue board with dense gold pins, gold edge-fingers, high chip density"
+      },
+      {
+        "sub_id": "pcb-grade-b",
+        "name": "Grade B: Standard PC Motherboards & Laptop Boards",
+        "name_hi": "ग्रेड बी: साधारण कंप्यूटर मदरबोर्ड और लैपटॉप बोर्ड",
+        "name_mr": "ग्रेड बी: सर्वसाधारण कॉम्प्युटर मदरबोर्ड आणि लॅपटॉप बोर्ड",
+        "base_rate_per_kg": 380,
+        "epr_bonus_per_kg": 30,
+        "precious_metals": { "gold_g_per_kg": 0.15, "silver_g_per_kg": 1.2, "copper_g_per_kg": 180, "palladium_g_per_kg": 0.02 },
+        "visual_clues": "Standard green boards with CPU socket, expansion slots, capacitors"
+      },
+      {
+        "sub_id": "pcb-grade-c",
+        "name": "Grade C: TV & Power Supply (SMPS) Brown Single-Sided Boards",
+        "name_hi": "ग्रेड सी: टीवी व पावर सप्लाई (SMPS) के भूरे बोर्ड",
+        "name_mr": "ग्रेड सी: टीव्ही आणि पॉवर सप्लायचे (SMPS) तपकिरी बोर्ड",
+        "base_rate_per_kg": 85,
+        "epr_bonus_per_kg": 10,
+        "precious_metals": { "gold_g_per_kg": 0.005, "silver_g_per_kg": 0.1, "copper_g_per_kg": 65, "palladium_g_per_kg": 0.0 },
+        "visual_clues": "Brown/yellow phenolic boards with large transformers and heavy capacitors, no gold"
+      }
+    ],
+    "density_g_cm3": 1.85,
+    "hazardous": true,
+    "hazard_type": "Brominated flame retardants & lead solder",
+    "safe_handling_instruction_hi": "सर्किट बोर्ड को कभी भी तेज़ाब में न गलाएं और न ही आग पर तपाएं। इसे साबुत अधिकृत रिसाइक्लर को दें ताकि सोना और तांबा सुरक्षित निकाला जा सके।",
+    "safe_handling_instruction_mr": "सर्किट बोर्ड कधीही ऍसिडमध्ये विरघळवू नका किंवा आगीवर जाळू नका. सोने आणि तांबे सुरक्षित मिळवण्यासाठी ते पूर्ण अधिकृत रिसायकलर्सना द्या.",
+    "icon": "circuit"
+  },
+  {
+    "id": "mat-batt",
+    "category": "Batteries (Li-ion & Lead-Acid)",
+    "name_hi": "बैटरियां (लिथियम-आयन, लैपटॉप व इनवर्टर)",
+    "name_mr": "बॅटऱ्या (लिथियम-आयन, लॅपटॉप व इन्व्हर्टर)",
+    "sub_categories": [
+      {
+        "sub_id": "batt-li-pouch",
+        "name": "Mobile & Tablet Li-Po Pouch Cells",
+        "name_hi": "मोबाइल व टैबलेट लिथियम पाउच बैटरी",
+        "name_mr": "मोबाईल व टॅबलेट लिथियम पाउच बॅटरी",
+        "base_rate_per_kg": 240,
+        "epr_bonus_per_kg": 50,
+        "precious_metals": { "lithium_g_per_kg": 35, "cobalt_g_per_kg": 120, "nickel_g_per_kg": 40 },
+        "visual_clues": "Flat soft silver/black battery packs, easily punctured if handled roughly"
+      },
+      {
+        "sub_id": "batt-18650",
+        "name": "Laptop & Powerbank Cylindrical 18650 Cells",
+        "name_hi": "लैपटॉप व पावरबैंक 18650 गोल सेल",
+        "name_mr": "लॅपटॉप व पॉवरबँक 18650 दंडगोलाकार सेल",
+        "base_rate_per_kg": 290,
+        "epr_bonus_per_kg": 55,
+        "precious_metals": { "lithium_g_per_kg": 40, "cobalt_g_per_kg": 140, "nickel_g_per_kg": 60 },
+        "visual_clues": "Blue/pink/green cylindrical metal jacket cells"
+      },
+      {
+        "sub_id": "batt-lead-acid",
+        "name": "UPS & Inverter Heavy Lead-Acid Batteries",
+        "name_hi": "यूपीएस व इनवर्टर की भारी लेड-एसिड बैटरी",
+        "name_mr": "यूपीएस व इन्व्हर्टरची वजनदार लेड-अॅसिड बॅटरी",
+        "base_rate_per_kg": 95,
+        "epr_bonus_per_kg": 18,
+        "precious_metals": { "lead_g_per_kg": 600, "antimony_g_per_kg": 20 },
+        "visual_clues": "Large heavy plastic rectangular blocks with lead terminals and acid vents"
+      }
+    ],
+    "density_g_cm3": 2.45,
+    "hazardous": true,
+    "hazard_type": "Explosion risk, acid leakage, thermal runaway",
+    "safe_handling_instruction_hi": "चेतावनी! बैटरी पर कभी कील न ठोकें और न ही लोहे के कबाड़ के नीचे दबाएं। फूली हुई बैटरी को तुरंत रेत की बाल्टी में अलग रखें।",
+    "safe_handling_instruction_mr": "सावधान! बॅटरीवर कधीही खिळा मारू नका आणि लोखंडाच्या भंगाराखाली दाबू नका. फुगलेली बॅटरी लगेच वाळूच्या बादलीत वेगळी ठेवा.",
+    "icon": "battery-charging"
+  },
+  {
+    "id": "mat-cables",
+    "category": "Cables & Wiring",
+    "name_hi": "केबल और बिजली के तार",
+    "name_mr": "केबल्स आणि विजेच्या तारा",
+    "sub_categories": [
+      {
+        "sub_id": "cable-copper-high",
+        "name": "Heavy Copper Power Cables (>70% Copper)",
+        "name_hi": "मोटे तांबे वाले पावर केबल (70% से अधिक तांबा)",
+        "name_mr": "जाड तांब्याचे पॉवर केबल (70% पेक्षा जास्त तांबे)",
+        "base_rate_per_kg": 460,
+        "epr_bonus_per_kg": 25,
+        "precious_metals": { "copper_g_per_kg": 720 },
+        "visual_clues": "Thick black/grey rubber insulation with multi-strand bright pink copper"
+      },
+      {
+        "sub_id": "cable-lan-data",
+        "name": "Data, Telecom & LAN Ethernet Cables (CAT6/USB)",
+        "name_hi": "डेटा, कंप्यूटर लैन (LAN) व मोबाइल केबल",
+        "name_mr": "डेटा, कॉम्प्युटर लॅन (LAN) व मोबाईल केबल",
+        "base_rate_per_kg": 210,
+        "epr_bonus_per_kg": 20,
+        "precious_metals": { "copper_g_per_kg": 400 },
+        "visual_clues": "Thin multi-colored twisted pair wires inside PVC sleeve"
+      }
+    ],
+    "density_g_cm3": 1.45,
+    "hazardous": false,
+    "hazard_type": "Toxic dioxin smoke if burned in open air",
+    "safe_handling_instruction_hi": "केबल को कभी भी खुले में आग लगाकर न जलाएं! जला हुआ काला तांबा कम दाम में बिकता है, जबकि मशीन से छीला गया तांबा ₹460 किलो में बिकता है।",
+    "safe_handling_instruction_mr": "केबल कधीही उघड्यावर आगीत जाळू नका! जळालेले काळे तांबे कमी भावात विकले जाते, तर सोललेले तांबे ₹460 किलो भावाने विकले जाते.",
+    "icon": "cable"
+  },
+  {
+    "id": "mat-crt-disp",
+    "category": "Displays (CRTs, LCD & LED Panels)",
+    "name_hi": "स्क्रीन व डिस्प्ले (पुराने CRT मॉनिटर, LCD/LED टीवी)",
+    "name_mr": "स्क्रीन आणि डिस्प्ले (जुने CRT मॉनिटर्स, LCD/LED टीव्ही)",
+    "sub_categories": [
+      {
+        "sub_id": "disp-crt-glass",
+        "name": "Cathode Ray Tubes (CRT TV & Computer Monitors)",
+        "name_hi": "पुराने सीआरटी (CRT) टीवी व मॉनिटर",
+        "name_mr": "जुने सीआरटी (CRT) टीव्ही आणि मॉनिटर्स",
+        "base_rate_per_kg": 18,
+        "epr_bonus_per_kg": 12,
+        "precious_metals": { "lead_g_per_kg": 85, "copper_yoke_g": 350 },
+        "visual_clues": "Heavy glass bulb with electronic neck gun and copper deflection yoke"
+      },
+      {
+        "sub_id": "disp-flat-lcd",
+        "name": "Flat LCD/LED TV Panels & Laptop Screens",
+        "name_hi": "पतले एलसीडी/एलईडी टीवी स्क्रीन व लैपटॉप पैनल",
+        "name_mr": "पातळ एलसीडी/एलईडी टीव्ही स्क्रीन व लॅपटॉप पॅनल",
+        "base_rate_per_kg": 65,
+        "epr_bonus_per_kg": 22,
+        "precious_metals": { "indium_g_per_kg": 0.25, "aluminum_g_per_kg": 180 },
+        "visual_clues": "Flat glass display sandwich with backlight diffuser sheets and aluminum frame"
+      }
+    ],
+    "density_g_cm3": 1.25,
+    "hazardous": true,
+    "hazard_type": "Leaded glass implosion, mercury in CCFL backlight tubes, cadmium phosphors",
+    "safe_handling_instruction_hi": "सावधान! सीआरटी के शीशे को हथौड़े से न फोड़ें। इसमें जहरीला लेड और फॉस्फोरस होता है। साबुत जमा करने पर सुरक्षा बोनस मिलता है।",
+    "safe_handling_instruction_mr": "सावधान! सीआरटीच्या काचेला हातोड्याने फोडू नका. यात विषारी लेड आणि फॉस्फरस असते. अखंड दिल्यास सुरक्षा बोनस मिळतो.",
+    "icon": "monitor"
+  },
+  {
+    "id": "mat-motors",
+    "category": "Motors, Compressors & Transformers",
+    "name_hi": "मोटर, कंप्रेसर और ट्रांसफॉर्मर",
+    "name_mr": "मोटार, कॉम्प्रेसर आणि ट्रान्सफॉर्मर",
+    "sub_categories": [
+      {
+        "sub_id": "motor-copper-pure",
+        "name": "Pure Copper Winding Motors & AC Compressors",
+        "name_hi": "100% शुद्ध तांबे की वाइंडिंग वाली मोटर व फ्रिज/एसी कंप्रेसर",
+        "name_mr": "100% अस्सल तांब्याची वाइंडिंग असलेली मोटार व एसी कॉम्प्रेसर",
+        "base_rate_per_kg": 165,
+        "epr_bonus_per_kg": 15,
+        "precious_metals": { "copper_g_per_kg": 250, "iron_g_per_kg": 700 },
+        "visual_clues": "Heavy sealed black domes or cast-iron motor casings with red copper wire"
+      },
+      {
+        "sub_id": "motor-alu-mix",
+        "name": "Copper-Clad Aluminum (CCA) Cheap Winding Motors",
+        "name_hi": "एल्युमिनियम मिक्स वाइंडिंग मोटर",
+        "name_mr": "अ‍ॅल्युमिनियम मिक्स वाइंडिंग मोटार",
+        "base_rate_per_kg": 85,
+        "epr_bonus_per_kg": 8,
+        "precious_metals": { "aluminum_g_per_kg": 180, "iron_g_per_kg": 750 },
+        "visual_clues": "Lighter weight motor, silver-tinted wire when scratched"
+      }
+    ],
+    "density_g_cm3": 3.85,
+    "hazardous": false,
+    "hazard_type": "Heavy lifting injury, trapped mineral oil in compressors",
+    "safe_handling_instruction_hi": "कंप्रेसर का तेल नाली में न बहाएं। 'ध्वनि से तांबा परख' फीचर से चेक करें कि वाइंडिंग खरा तांबा है या एल्युमिनियम!",
+    "safe_handling_instruction_mr": "कॉम्प्रेसरचे तेल नाल्यात टाकू नका. 'आवाजावरून तांबे तपासा' फीचरने वाइंडिंग अस्सल तांबे आहे की अ‍ॅल्युमिनियम ते तपासा!",
+    "icon": "disc"
+  },
+  {
+    "id": "mat-plastics",
+    "category": "E-Waste Mixed Plastics (ABS, HIPS, PC)",
+    "name_hi": "इलेक्ट्रॉनिक प्लास्टिक बॉडी (ABS/HIPS - कंप्यूटर व प्रिंटर केसिंग)",
+    "name_mr": "इलेक्ट्रॉनिक प्लास्टिक बॉडी (ABS/HIPS - कॉम्प्युटर व प्रिंटर केसिंग)",
+    "sub_categories": [
+      {
+        "sub_id": "plastic-clean-abs",
+        "name": "Clean ABS/PC White & Black Enclosures",
+        "name_hi": "साफ एबीएस प्लास्टिक (मॉनिटर, सीपीयू, कीबोर्ड की बॉडी)",
+        "name_mr": "स्वच्छ एबीएस प्लास्टिक (मॉनिटर, सीपीयू, कीबोर्ड बॉडी)",
+        "base_rate_per_kg": 42,
+        "epr_bonus_per_kg": 8,
+        "precious_metals": {},
+        "visual_clues": "Rigid thermoplastic outer casings with recycling symbols (ABS, PC)"
+      }
+    ],
+    "density_g_cm3": 1.05,
+    "hazardous": false,
+    "hazard_type": "Flame retardants",
+    "safe_handling_instruction_hi": "प्लास्टिक को कभी न जलाएं। रंग के हिसाब से अलग करें (सफेद और काला अलग रखें) ताकि रिसाइक्लर ज्यादा भाव दे।",
+    "safe_handling_instruction_mr": "प्लास्टिक कधीही जाळू नका. रंगानुसार वेगळे करा (पांढरे व काळे वेगळे ठेवा) जेणेकरून चांगला भाव मिळेल.",
+    "icon": "box"
+  }
+]

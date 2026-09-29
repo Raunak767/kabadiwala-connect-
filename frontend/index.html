@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ई-सेतु | कबाड़ से कमाई, सुरक्षा और सम्मान</title>
+  <meta name="description" content="स्थानीय भाषाओं में कबाड़ी साथियों को अधिकृत रिसाइक्लर्स से जोड़ने वाला डिजिटल मंच।">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#f97316">
+
+  <!-- Core Stylesheets (Peach & White Theme) -->
+  <link rel="stylesheet" href="./css/design-system.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       2-कॉलम मुख्य लेआउट (Two-Column Layout: Left Sidebar + Right Main)
+       ==================================================================== -->
+  <div class="app-layout-wrapper">
+
+    <!-- ==================================================================
+         बायीं तरफ स्थायी साइडबार (Left Permanent Sidebar)
+         ================================================================== -->
+    <aside class="main-sidebar-pane" id="appSidebar">
+      
+      <!-- मोबाइल में साइडबार बंद करने का बटन -->
+      <div class="sidebar-mobile-close">
+        <button class="btn-secondary" onclick="closeSidebar()" style="width:100%; margin-bottom:12px; font-weight:700;">
+          ✕ साइडबार बंद करें
+        </button>
+      </div>
+      
+      <!-- 1. प्रोफाइल कार्ड (Kabadiwala Profile) -->
+      <div class="sidebar-profile-card">
+        <div class="profile-avatar-wrap">
+          <div class="profile-avatar">👨🏽</div>
+          <div class="profile-info">
+            <h3 id="sidebarPersonaName">रामू शिंदे</h3>
+            <p id="sidebarPersonaRole">फेरीवाला कबाड़ी साथी • धारावी, मुंबई</p>
+            <span class="badge badge-gold" id="sidebarKarmaBadge" style="margin-top:4px;">हरित योद्धा (680 अंक)</span>
+          </div>
+        </div>
+
+        <!-- 2. पिछले महीने के आंकड़े (Last Month Earnings & Waste Sold) -->
+        <div class="last-month-stat-box">
+          <div style="font-size:0.78rem; font-weight:700; color:#c2410c; margin-bottom:4px; display:flex; justify-content:space-between;">
+            <span>📅 पिछला महीना (अगस्त 2026)</span>
+            <span>१४ सफल बिक्री</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">पिछले महीने की कमाई:</span>
+            <span class="stat-val-money" id="sidebarLastMonthEarnings">₹28,450</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">बेचा गया कुल कबाड़:</span>
+            <span class="stat-val-weight" id="sidebarLastMonthWaste">210.5 किलो</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">सीधा पर्यावरण बोनस:</span>
+            <span style="font-size:1rem; font-weight:800; color:#059669;">+ ₹2,350</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. कबाड़ खरीदार अधिकृत रिसाइक्लर (Buyer History Section) -->
+      <div class="sidebar-buyers-section">
+        <h3>
+          <span>🏭</span> कबाड़ खरीदार (अधिकृत रिसाइक्लर)
+        </h3>
+        <p style="font-size:0.75rem; color:#6b7280; margin-bottom:8px;">
+          पिछले महीने जिन अधिकृत फैक्ट्रियों को सीधा कबाड़ बेचा गया:
+        </p>
+
+        <div id="sidebarBuyersList">
+          <!-- Dynamically Populated from collector_profiles.json -->
+        </div>
+      </div>
+
+      <!-- 4. साइडबार में अतिरिक्त सुविधाएं (Extra Sidebar Features) -->
+      <div class="sidebar-extra-card">
+        <div style="font-size:0.8rem; font-weight:700; color:#c2410c; margin-bottom:8px;">
+          ⚡ त्वरित सुविधाएं (Quick Actions):
+        </div>
+        <button class="sidebar-feature-btn" onclick="window.voiceEngine.playMandiBulletin()">
+          📻 दैनिक मंडी रेडियो चलाएं
+        </button>
+        <button class="sidebar-feature-btn" onclick="openLegalShieldModal()">
+          🛡️ कानूनी सुरक्षा पास देखें
+        </button>
+        <button class="sidebar-feature-btn" onclick="alert('आपातकालीन कबाड़ सुरक्षा हेल्पलाइन: 1800-120-ESETU (टोल फ्री)')">
+          📞 आपातकालीन सुरक्षा हेल्पलाइन
+        </button>
+      </div>
+
+      <!-- 5. 7 क्षेत्रीय भाषाएं (7 Indian Languages Palette) -->
+      <div style="background:#fff7ed; border:1px solid var(--peach-200); border-radius:var(--radius-md); padding:12px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#c2410c; margin-bottom:8px;">
+          🗣️ अपनी भाषा चुनें (Select Language):
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:5px;">
+          <button class="lang-btn active" data-lang="hi">हिंदी</button>
+          <button class="lang-btn" data-lang="mr">मराठी</button>
+          <button class="lang-btn" data-lang="bho">भोजपुरी</button>
+          <button class="lang-btn" data-lang="pa">ਪੰਜਾਬੀ</button>
+          <button class="lang-btn" data-lang="bn">বাংলা</button>
+          <button class="lang-btn" data-lang="ta">தமிழ்</button>
+          <button class="lang-btn" data-lang="te">తెలుగు</button>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ==================================================================
+         दायीं तरफ मुख्य सामग्री (Right Main Content Pane)
+         ================================================================== -->
+    <section class="main-content-pane">
+
+      <!-- शीर्ष नेविगेशन बार (Top Navigation Bar) -->
+      <header class="top-nav">
+        <div class="brand-section">
+          <div class="brand-logo-badge">🌿</div>
+          <div class="brand-title-wrap">
+            <h1 data-i18n="app_title">ई-सेतु</h1>
+            <div class="brand-tagline" data-i18n="app_subtitle">कबाड़ से सम्मान, सुरक्षा और सही दाम</div>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="mobile-menu-btn" onclick="openSidebar()" aria-label="Open Profile and Menu" title="प्रोफाइल व भाषा">
+            👤 प्रोफाइल व भाषा
+          </button>
+          <div class="offline-pill" id="offlinePill">
+            <span class="pulse-dot"></span>
+            <span data-i18n="offline_status">ऑफलाइन तैयार</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- मुख्य भूमिका चयनकर्ता (Role Switcher) -->
+      <nav class="role-tabs">
+        <button class="role-tab-btn active" id="roleCollectorBtn">
+          📱 <span data-i18n="role_collector">कबाड़ी साथी (मोबाइल)</span>
+        </button>
+        <button class="role-tab-btn" id="roleRecyclerBtn">
+          🏢 <span data-i18n="role_recycler">अधिकृत रिसाइक्लर पोर्टल</span>
+        </button>
+      </nav>
+
+      <!-- ==============================================================
+           व्यू 1: कबाड़ी साथी मोबाइल मंच (Collector Mobile View)
+           ============================================================== -->
+      <main id="collectorView">
+        
+        <!-- साथी प्रोफाइल चयनकर्ता बार -->
+        <section class="field-persona-bar">
+          <span style="color:#c2410c; font-weight:700;">कबाड़ी प्रोफाइल बदलें:</span>
+          <button class="persona-chip active" data-id="COL-RAMU-01">
+            👤 रामू शिंदे (धारावी फेरीवाला)
+          </button>
+          <button class="persona-chip" data-id="COL-BABU-02">
+            👤 बाबू भाई (कुर्ला डीलर)
+          </button>
+          <span style="margin-left:auto; color:#059669; font-weight:700;" id="activeKarmaScoreWrap">
+            🌱 स्वच्छ कर्मा: <strong id="activeKarmaScore">680</strong> अंक
+          </span>
+        </section>
+
+        <!-- 1. दैनिक मंडी भाव ऑडियो बुलेटिन -->
+        <section class="mandi-audio-card">
+          <div class="audio-info-wrap">
+            <div class="radio-icon-pill">📻</div>
+            <div class="audio-text-content">
+              <h3 data-i18n="mandi_radio_title">दैनिक मंडी भाव बुलेटिन</h3>
+              <p data-i18n="mandi_radio_sub">आज सुबह 7:30 बजे का ताज़ा ऑडियो भाव</p>
+            </div>
+          </div>
+
+          <div class="audio-waveform-bars">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+          </div>
+
+          <button class="play-broadcast-btn" id="playBroadcastBtn" onclick="window.voiceEngine.playMandiBulletin()">
+            <span>▶</span> <span data-i18n="play_audio">सुनें (ऑडियो)</span>
+          </button>
+        </section>
+
+        <!-- 2. "बोलके लॉट बनाएं" हीरो वॉइस बैनर -->
+        <section class="voice-hero-banner">
+          <h2 style="font-size:1.3rem; color:#1f2937;" data-i18n="voice_hero_title">बोलके लॉट बनाएं</h2>
+          <p style="font-size:0.9rem; color:#c2410c; margin-top:4px; font-weight:600;" data-i18n="voice_hero_sub">
+            माइक दबाकर बोलें: '10 किलो कंप्यूटर बोर्ड और 2 बैटरी, कुर्ला'
+          </p>
+
+          <button class="giant-mic-btn" id="giantMicBtn" onclick="window.voiceEngine.toggleListening()" title="माइक दबाएं और बोलें">
+            🎙️
+          </button>
+
+          <div class="voice-transcript-box" id="voiceTranscript">
+            "माइक दबाएं और अपनी भाषा में बोलें..."
+          </div>
+
+          <!-- तुरंत बोलने व टेस्ट करने के लिए उदाहरण चिप्स -->
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin-top:10px;">
+            <span style="font-size:0.75rem; color:#6b7280; width:100%;">💡 या नीचे दिए किसी भी उदाहरण पर क्लिक करके टेस्ट करें:</span>
+            <button class="btn-secondary" style="font-size:0.75rem; padding:6px 10px; min-height:auto;" onclick="window.voiceEngine.handleVoiceTranscript('भैया 10 किलो तांबे का केबल है कुर्ला में')">
+              🔌 10 किलो तांबा केबल
+            </button>
+            <button class="btn-secondary" style="font-size:0.75rem; padding:6px 10px; min-height:auto;" onclick="window.voiceEngine.handleVoiceTranscript('भैया 5 किलो लिथियम बैटरी है धारावी में')">
+              🔋 5 किलो लिथियम बैटरी
+            </button>
+            <button class="btn-secondary" style="font-size:0.75rem; padding:6px 10px; min-height:auto;" onclick="window.voiceEngine.handleVoiceTranscript('भैया 20 किलो कंप्यूटर मदरबोर्ड है')">
+              💻 20 किलो कंप्यूटर मदरबोर्ड
+            </button>
+            <button class="btn-secondary" style="font-size:0.75rem; padding:6px 10px; min-height:auto;" onclick="window.voiceEngine.handleVoiceTranscript('भैया 40 किलो इनवर्टर बैटरी है कुर्ला में')">
+              ⚡ 40 किलो इनवर्टर बैटरी
+            </button>
+          </div>
+        </section>
+
+        <!-- 3. कार्य ग्रिड (4 पेटेंट-ग्रेड फीचर्स) -->
+        <section class="action-grid">
+          <!-- फीचर 1: कैमरा लेंस व काँटा परख -->
+          <div class="feature-tile" onclick="openScannerModal()">
+            <div class="tile-icon-header">
+              <div class="tile-icon">📸</div>
+              <span class="badge badge-green">एआई लेंस</span>
+            </div>
+            <div>
+              <h3 style="font-size:1.05rem; color:#1f2937;" data-i18n="action_scrap_lens">कैमरा लेंस व काँटा परख</h3>
+              <p style="font-size:0.8rem; color:#6b7280; margin-top:4px;" data-i18n="action_scrap_lens_desc">
+                सर्किट बोर्ड ग्रेडिंग और तराजू की डिजिटल तौल
+              </p>
+            </div>
+          </div>
+
+          <!-- फीचर 2: ध्वनि से तांबा परख -->
+          <div class="feature-tile tile-radical" onclick="openAcousticModal()">
+            <div class="tile-icon-header">
+              <div class="tile-icon">🔊</div>
+              <span class="badge badge-gold">पेटेंट-ग्रेड</span>
+            </div>
+            <div>
+              <h3 style="font-size:1.05rem; color:#1f2937;" data-i18n="action_acoustic">ध्वनि से तांबा परख</h3>
+              <p style="font-size:0.8rem; color:#6b7280; margin-top:4px;" data-i18n="action_acoustic_desc">
+                सिक्का बजाकर असली तांबा vs एल्युमिनियम पहचानें
+              </p>
+            </div>
+          </div>
+
+          <!-- फीचर 3: पुलिस व चोरी सुरक्षा कवच -->
+          <div class="feature-tile tile-radical" onclick="openLegalShieldModal()">
+            <div class="tile-icon-header">
+              <div class="tile-icon">🛡️</div>
+              <span class="badge badge-gold">सुरक्षा कवच</span>
+            </div>
+            <div>
+              <h3 style="font-size:1.05rem; color:#1f2937;" data-i18n="action_legal_shield">पुलिस व चोरी सुरक्षा कवच</h3>
+              <p style="font-size:0.8rem; color:#6b7280; margin-top:4px;" data-i18n="action_legal_shield_desc">
+                सरकारी सुरक्षित कबाड़ प्रमाण पत्र (बारकोड रसीद)
+              </p>
+            </div>
+          </div>
+
+          <!-- फीचर 4: पुर्ज़ा बचाओ (री-यूज़ राडार) -->
+          <div class="feature-tile tile-radical" onclick="openCannibalizationModal()">
+            <div class="tile-icon-header">
+              <div class="tile-icon">💻</div>
+              <span class="badge badge-gold">पुर्ज़ा बचाओ</span>
+            </div>
+            <div>
+              <h3 style="font-size:1.05rem; color:#1f2937;" data-i18n="action_cannibal">पुर्ज़ा बचाओ (री-यूज़ राडार)</h3>
+              <p style="font-size:0.8rem; color:#6b7280; margin-top:4px;" data-i18n="action_cannibal_desc">
+                लैपटॉप तोड़ने से पहले ₹1,200 की रैम व स्क्रीन बचाएं
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. आज के पारदर्शी कबाड़ भाव (मंडी दरें) -->
+        <section class="glass-card" style="margin-bottom:24px; background:#ffffff;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <h2 style="font-size:1.2rem; color:#1f2937;" data-i18n="rates_title">आज के कबाड़ भाव (मंडी दरें)</h2>
+              <p style="font-size:0.85rem; color:#6b7280;" data-i18n="rates_sub">पर्यावरण बोनस सहित पारदर्शी नकद मूल्य</p>
+            </div>
+            <span class="badge badge-green">लाइव मंडी</span>
+          </div>
+
+          <div class="price-board-grid" id="ratesBoardGrid"></div>
+        </section>
+
+        <!-- 5. "दोस्त खाता" (नकद व डिजिटल हिसाब) -->
+        <section class="glass-card" style="background:#ffffff;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <div>
+              <h2 style="font-size:1.2rem; color:#1f2937;" data-i18n="khata_title">दोस्त खाता (हिसाब-किताब)</h2>
+              <p style="font-size:0.85rem; color:#6b7280;" data-i18n="khata_sub">नकद और डिजिटल दोनों में पक्की रसीद</p>
+            </div>
+            <span class="badge badge-gold" id="activeTierBadge">हरित योद्धा</span>
+          </div>
+
+          <!-- तैयार लॉट्स -->
+          <h3 style="font-size:0.95rem; color:#1f2937; margin-bottom:8px;">📦 तैयार लॉट (हैंडओवर के लिए):</h3>
+          <div id="activeLotsContainer"></div>
+
+          <!-- हालिया सफल लेन-देन -->
+          <h3 style="font-size:0.95rem; color:#1f2937; margin:16px 0 8px;">📜 हाल के सफल लेन-देन:</h3>
+          <div id="transactionsHistoryContainer"></div>
+        </section>
+
+        <!-- 6. यूनिट इकोनॉमिक्स तुलना कंटेनर -->
+        <section id="unitEconomicsContainer"></section>
+
+      </main>
+
+      <!-- ==============================================================
+           व्यू 2: अधिकृत रिसाइक्लर पोर्टल (Recycler Cockpit View)
+           ============================================================== -->
+      <main id="recyclerCockpitView" style="display:none;"></main>
+
+      <!-- फुटर -->
+      <footer style="text-align:center; padding:24px 0 12px; font-size:0.8rem; color:#6b7280;">
+        🌱 <strong>ई-सेतु</strong> • स्मार्ट इंडिया हैकाथॉन (SIH 2026) पहल • ई-कचरा प्रबंधन नियम 2022
+      </footer>
+
+    </section>
+  </div>
+
+  <!-- ====================================================================
+       मोडल्स (Modals - 100% Regional Languages)
+       ==================================================================== -->
+
+  <!-- मोडल 1: कैमरा लेंस व काँटा परख -->
+  <div class="modal-overlay" id="scannerModal">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="color:#1f2937; font-size:1.2rem;">📸 कैमरा लेंस व काँटा परख</h3>
+        <button class="modal-close-btn btn-secondary" style="padding:4px 10px; min-height:auto;">✕</button>
+      </div>
+
+      <div class="camera-scanner-hud">
+        <video id="scannerVideo" autoplay playsinline muted style="width:100%; height:100%; object-fit:cover;"></video>
+        <div class="viewfinder-box"></div>
+        <div class="chumbak-warning-banner" id="chumbakBanner" style="display:none;">
+          ⚠️ तराजू झुकाव / चुंबक डिटेक्टर सक्रिय
+        </div>
+      </div>
+
+      <div style="display:flex; gap:8px; margin:12px 0;">
+        <button class="btn-secondary" style="flex:1; font-size:0.8rem; padding:8px;" onclick="window.scrapLens.renderAnalysisResult(document.getElementById('scannerResultsContainer'), 'pcb_gold')">
+          सर्वर बोर्ड
+        </button>
+        <button class="btn-secondary" style="flex:1; font-size:0.8rem; padding:8px;" onclick="window.scrapLens.renderAnalysisResult(document.getElementById('scannerResultsContainer'), 'pcb_brown')">
+          भूरा टीवी बोर्ड
+        </button>
+        <button class="btn-secondary" style="flex:1; font-size:0.8rem; padding:8px;" onclick="window.scrapLens.renderAnalysisResult(document.getElementById('scannerResultsContainer'), 'batt_punctured')">
+          फूली बैटरी
+        </button>
+        <button class="btn-secondary" style="flex:1; font-size:0.8rem; padding:8px;" onclick="window.scrapLens.renderAnalysisResult(document.getElementById('scannerResultsContainer'), 'scale_fraud')">
+          काँटा फ्रॉड
+        </button>
+      </div>
+
+      <div id="scannerResultsContainer"></div>
+    </div>
+  </div>
+
+  <!-- मोडल 2: ध्वनि से तांबा परख -->
+  <div class="modal-overlay" id="acousticModal">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="color:#1f2937; font-size:1.2rem;">🔊 ध्वनि से तांबा परख</h3>
+        <button class="modal-close-btn btn-secondary" style="padding:4px 10px; min-height:auto;">✕</button>
+      </div>
+
+      <p style="font-size:0.85rem; color:#4b5563; text-align:center;">
+        मोटर या कंप्रेसर की वाइंडिंग पर सिक्के से <strong>"टिन-टिन"</strong> बजाएं:
+      </p>
+
+      <canvas class="frequency-canvas" id="frequencyCanvas" width="500" height="140"></canvas>
+
+      <div class="acoustic-hud" style="display:flex; flex-direction:column; gap:8px;">
+        <button class="btn-primary" onclick="window.acousticTester.startTest()">
+          🪙 सिक्का बजाकर लाइव टेस्ट करें (Mic)
+        </button>
+        <div style="display:flex; gap:8px;">
+          <button class="btn-secondary" style="flex:1; font-size:0.8rem; padding:8px;" onclick="window.acousticTester.testPureCopper()">
+            ✅ 100% खरा तांबा (3.1 kHz)
+          </button>
+          <button class="btn-secondary" style="flex:1; font-size:0.8rem; padding:8px;" onclick="window.acousticTester.testAluMix()">
+            ⚠️ मिलावटी एल्युमिनियम (4.9 kHz)
+          </button>
+        </div>
+      </div>
+
+      <div id="acousticVerdictBox"></div>
+    </div>
+  </div>
+
+  <!-- मोडल 3: कानूनी सुरक्षा कवच -->
+  <div class="modal-overlay" id="legalShieldModal">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="color:#1f2937; font-size:1.2rem;">🛡️ कानूनी सुरक्षा कवच</h3>
+        <button class="modal-close-btn btn-secondary" style="padding:4px 10px; min-height:auto;">✕</button>
+      </div>
+      <div id="legalShieldContent"></div>
+    </div>
+  </div>
+
+  <!-- मोडल 4: कबाड़ से पुर्ज़ा बचाओ -->
+  <div class="modal-overlay" id="cannibalModal">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="color:#1f2937; font-size:1.2rem;">💻 कबाड़ से पुर्ज़ा बचाओ (री-यूज़ राडार)</h3>
+        <button class="modal-close-btn btn-secondary" style="padding:4px 10px; min-height:auto;">✕</button>
+      </div>
+      <div id="cannibalContent"></div>
+    </div>
+  </div>
+
+  <!-- मोडल 5: हैंडओवर पुष्टि -->
+  <div class="modal-overlay" id="handshakeModal">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="color:#1f2937; font-size:1.2rem;">🤝 हैंडओवर पुष्टि</h3>
+        <button class="modal-close-btn btn-secondary" style="padding:4px 10px; min-height:auto;">✕</button>
+      </div>
+      <div id="handshakeContent"></div>
+    </div>
+  </div>
+
+  <!-- मोडल 6: सरकारी फॉर्म-6 मेनिफेस्ट -->
+  <div class="modal-overlay" id="form6Modal">
+    <div class="modal-content" style="max-width:680px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <h3 style="color:#1f2937; font-size:1.2rem;">📜 सरकारी फॉर्म-6 मेनिफेस्ट</h3>
+        <button class="modal-close-btn btn-secondary" style="padding:4px 10px; min-height:auto;">✕</button>
+      </div>
+      <div id="form6Content"></div>
+    </div>
+  </div>
+
+  <!-- मोबाइल साइडबार बैकड्रॉप -->
+  <div id="sidebarBackdrop" class="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+  <!-- स्क्रिप्ट्स -->
+  <script src="./js/vernacular.js"></script>
+  <script src="./js/store.js"></script>
+  <script src="./js/voice-engine.js"></script>
+  <script src="./js/acoustic-tester.js"></script>
+  <script src="./js/legal-shield.js"></script>
+  <script src="./js/cannibalization.js"></script>
+  <script src="./js/scrap-lens.js"></script>
+  <script src="./js/porh-handshake.js"></script>
+  <script src="./js/recycler-cockpit.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

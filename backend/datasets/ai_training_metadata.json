@@ -1,0 +1,104 @@
+{
+  "dataset_version": "2026.1-cpcb",
+  "name": "E-Setu AI Models & Physical Thresholds Training Metadata",
+  "acoustic_copper_resonance": {
+    "sample_rate_hz": 44100,
+    "fft_size": 2048,
+    "time_window_ms": 350,
+    "pure_copper": {
+      "nominal_frequency_hz": 3120,
+      "range_hz": [2950, 3350],
+      "damping_coefficient_zeta": 0.082,
+      "harmonic_ratio_f2_f1": 2.01,
+      "confidence_threshold": 0.92,
+      "verdict": "PURE_ELECTROLYTIC_COPPER",
+      "purity_estimate_pct": 99.95,
+      "vernacular_desc": "शुद्ध लाल तांबा (99.9% शुद्ध, मोटर व ट्रांसफॉर्मर वाइंडिंग)"
+    },
+    "copper_clad_aluminum": {
+      "nominal_frequency_hz": 4920,
+      "range_hz": [4700, 5200],
+      "damping_coefficient_zeta": 0.021,
+      "harmonic_ratio_f2_f1": 1.74,
+      "confidence_threshold": 0.88,
+      "verdict": "ALUMINUM_CORE_FRAUD_CCA",
+      "purity_estimate_pct": 28.5,
+      "vernacular_desc": "अंदर से सफेद एल्युमिनियम तार (CCA - सस्ता मिलावटी तार)"
+    },
+    "brass_zinc_alloy": {
+      "nominal_frequency_hz": 3850,
+      "range_hz": [3700, 4100],
+      "damping_coefficient_zeta": 0.045,
+      "harmonic_ratio_f2_f1": 1.92,
+      "confidence_threshold": 0.85,
+      "verdict": "BRASS_ALLOY",
+      "purity_estimate_pct": 60.0,
+      "vernacular_desc": "पीतल मिश्र धातु"
+    }
+  },
+  "pcb_computer_vision_classifier": {
+    "input_resolution": [640, 480],
+    "classes": [
+      {
+        "class_id": "pcb_grade_a_server_gold",
+        "label": "Grade A: Telecom & Server Motherboards",
+        "gold_fingers_detected": true,
+        "bg_color_dominant": ["#1e40af", "#047857"],
+        "chip_density_threshold_pct": 42.0,
+        "min_confidence": 0.85,
+        "sample_bounding_boxes": [
+          { "x": 0.12, "y": 0.15, "w": 0.76, "h": 0.68, "label": "Gold RAM Slots & BGA Chips" }
+        ]
+      },
+      {
+        "class_id": "pcb_grade_b_pc_laptop",
+        "label": "Grade B: Standard PC Motherboards",
+        "gold_fingers_detected": false,
+        "bg_color_dominant": ["#15803d", "#374151"],
+        "chip_density_threshold_pct": 24.0,
+        "min_confidence": 0.80,
+        "sample_bounding_boxes": [
+          { "x": 0.20, "y": 0.22, "w": 0.60, "h": 0.55, "label": "CPU Socket & Electrolytic Capacitors" }
+        ]
+      },
+      {
+        "class_id": "pcb_grade_c_brown_tv",
+        "label": "Grade C: Brown Paper Phenolic Single-Sided",
+        "gold_fingers_detected": false,
+        "bg_color_dominant": ["#78350f", "#92400e"],
+        "chip_density_threshold_pct": 4.5,
+        "min_confidence": 0.85,
+        "sample_bounding_boxes": [
+          { "x": 0.10, "y": 0.10, "w": 0.80, "h": 0.75, "label": "Flyback Transformer & Heatsinks" }
+        ]
+      },
+      {
+        "class_id": "battery_swollen_lipo_hazard",
+        "label": "Hazardous Swollen Lithium-Polymer Pouch",
+        "hazardous": true,
+        "fire_risk": "CRITICAL",
+        "sample_bounding_boxes": [
+          { "x": 0.25, "y": 0.30, "w": 0.50, "h": 0.40, "label": "Punctured / Swollen Pouch" }
+        ]
+      }
+    ]
+  },
+  "scale_kanta_ocr_sensor_guard": {
+    "dial_needle_recognition": {
+      "angle_zero_deg": 180.0,
+      "degrees_per_kg": 7.2,
+      "max_capacity_kg": 50.0,
+      "optical_flow_stability_frames": 5
+    },
+    "digital_7segment_ocr": {
+      "ocr_contrast_threshold": 128,
+      "decimal_dot_confidence": 0.90
+    },
+    "anti_magnet_tilt_guard": {
+      "max_acceptable_tilt_degrees": 5.0,
+      "fraud_alert_tilt_degrees": 12.0,
+      "hall_effect_anomaly_microtesla": 75.0,
+      "audio_alert_enabled": true
+    }
+  }
+}
