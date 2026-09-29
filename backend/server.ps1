@@ -89,7 +89,9 @@ try {
             $localPath = "/index.html"
         }
 
-        $filePath = Join-Path $PSScriptRoot ($localPath.TrimStart("/").Replace("/", "\"))
+        $parentFrontend = Join-Path (Split-Path $PSScriptRoot -Parent) "frontend"
+        $baseDir = if (Test-Path $parentFrontend) { $parentFrontend } else { $PSScriptRoot }
+        $filePath = Join-Path $baseDir ($localPath.TrimStart("/").Replace("/", "\"))
 
         if (Test-Path $filePath -PathType Leaf) {
             $ext = [System.IO.Path]::GetExtension($filePath).ToLower()

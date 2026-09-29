@@ -9,8 +9,11 @@ const path = require('path');
 const url = require('url');
 
 const PORT = process.env.PORT || 10000;
-const PUBLIC_DIR = __dirname;
-const DATASETS_DIR = path.join(__dirname, 'datasets');
+const FRONTEND_DIR = path.join(__dirname, '..', 'frontend');
+const PUBLIC_DIR = fs.existsSync(FRONTEND_DIR) ? FRONTEND_DIR : __dirname;
+const DATASETS_DIR = fs.existsSync(path.join(FRONTEND_DIR, 'datasets')) 
+  ? path.join(FRONTEND_DIR, 'datasets') 
+  : path.join(__dirname, 'datasets');
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',

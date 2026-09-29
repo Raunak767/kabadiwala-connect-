@@ -1,11 +1,15 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "outputDirectory": "frontend",
   "rewrites": [
-    { "source": "/health", "destination": "/api/health" },
-    { "source": "/api/status", "destination": "/api/status" },
-    { "source": "/api/verify-ceir", "destination": "/api/verify-ceir" },
-    { "source": "/api/(.*)", "destination": "/datasets/$1.json" }
+    { "source": "/health", "destination": "/backend/api/health" },
+    { "source": "/api/status", "destination": "/backend/api/status" },
+    { "source": "/api/verify-ceir", "destination": "/backend/api/verify-ceir" },
+    { "source": "/api/materials", "destination": "/backend/api/materials" },
+    { "source": "/api/prices", "destination": "/backend/api/prices" },
+    { "source": "/api/recyclers", "destination": "/backend/api/recyclers" },
+    { "source": "/api/(.*)", "destination": "/backend/datasets/$1.json" }
   ],
   "headers": [
     {
